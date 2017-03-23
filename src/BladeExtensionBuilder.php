@@ -75,9 +75,6 @@ class BladeExtensionBuilder
         $codeStart = <<<'HTML'
 <?php 
 call_user_func(function ($macroName, array $firstMerging, array $secondMerging = null) {
-    if ($secondMerging !== null) {
-        $firstMerging = array_merge($secondMerging, $firstMerging);
-    }
     $secondMerging = null;
     extract($firstMerging);
 ?>
